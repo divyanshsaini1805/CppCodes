@@ -1,0 +1,26 @@
+{
+	"C++ Snippet": {
+		"prefix": "Darray",
+		"body": [
+		"#include<bits/stdc++.h>",
+		"using namespace std;",
+
+		"int solve(int n)",
+		"{",
+		" ",
+		"}",
+		"int main()",
+		"{",
+		" int it,j,n;",
+		" cin >> n;",
+		" //for(int i=1;i<=n;i++) {",
+		"   	//cout << \" Case #\" << it+1 << \": \";",
+		"			//solve();",
+		" //}",
+		"solve();"
+		" return 0;",
+		"}"
+		],
+		"description": "C++ Snippet"
+	}
+}
