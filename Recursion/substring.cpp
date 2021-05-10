@@ -19,7 +19,7 @@ void substring2(char *in,char *out,int i,int j){
 
     if(in[i]=='\0'){
         out[j]='\0';
-        cout<<out[j]<<" ";
+        cout<<out<<" ";
         return;
     }
  out[j]=in[i];
@@ -32,8 +32,9 @@ string str;
 char a[100];char b[100];
 int index = str.length();
 cin>>str;
-gets(a);
+cin>>a;
 substring(str);
+cout<<endl;
 substring2(a,b,0,0);
     return 0;
 }

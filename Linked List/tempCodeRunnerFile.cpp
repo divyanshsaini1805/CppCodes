@@ -1,3 +1,9 @@
 insert_begin(&head,30);
 insert_begin(&head,20);
 insert_begin(&head,10);
+insert_end(&head,10);
+insert_end(&head,100);
+insert_end(&head,500);
+insert(&head,3,100);
+printList(head);
+cout<<endl;
