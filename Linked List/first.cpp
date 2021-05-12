@@ -56,7 +56,7 @@ curr->next=temp;
 
 
 void insert_begin(node **head, int x){
-node *temp = new node();
+node *temp = new node(); 
 temp->data=x;
 temp->next=*head;
 *head=temp;
@@ -84,13 +84,13 @@ void printList(node *node)
 {  
     while (node != NULL)  
     {  
-        cout<<" "<<node->data;  
+        cout<<" "<<node->data;   
         node = node->next;  
     }  
 }
 void reverse(struct node *&head){
 
-struct node *N ;
+struct node *N = NULL ;
 struct node *P = NULL;
 struct node *curr = head;
 
@@ -170,6 +170,7 @@ int main(){
 node *head=NULL;
 
 
+
 insert_begin(&head,30);
 insert_begin(&head,20);
 insert_begin(&head,10);
@@ -192,7 +193,7 @@ cout<<endl;
 // printList(head);
 cout<<endl;
 // cout<<midpoint(head);
-returnkthfromEnd(head,3);
+// returnkthfromEnd(head,3);
 
 return 0;
 

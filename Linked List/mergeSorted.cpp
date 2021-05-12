@@ -8,24 +8,6 @@ int data;
 struct node *next;
 };
 
-struct node* reverse(struct node **head){
-
-struct node *N ;
-struct node *P = NULL;
-struct node *curr = *head;
-
-while(curr!=NULL){
-    N = curr->next;
-
-    curr->next=P;
-
-    P = curr;
-    curr = N;
-
-}
-*head = P;
-return *head;
-}
 node* insertBegin(node **head,int data1){
 node *temp = new node();
 temp->data = data1;
@@ -63,8 +45,7 @@ else{
     head2 = head1;
     head2->next=mergeSorted(head,head1->next);
 }
-
-printList(head2);
+return(head2);
 }
 
 int main(){
@@ -72,7 +53,7 @@ int main(){
 
  struct node *head=NULL;
  struct node *head1=NULL;
- struct node *head2=mergeSorted(head,head1);
+ struct node *head2=NULL;
 
 
  insertBegin(&head,40);
@@ -85,11 +66,9 @@ int main(){
  insertBegin(&head1,60);
  insertBegin(&head1,50);
  
-//  printList(head);
+
 //  cout<<endl;
-    // reverse(&head);
-//  printList(head1);
-//  cout<<endl;
+
+head2 = mergeSorted(head,head1);
 printList(head2);
-mergeSorted(head,head1);
 }
