@@ -83,6 +83,24 @@ node *mergeSort(node *head){
     return c;
 }
 
+int getDecimalValue(node* head) {
+            
+        int n=0;
+        int sum=0;
+        node* curr=head;
+        while(curr->next!=NULL){
+            curr=curr->next;
+            n++;
+        }
+        curr=head;        
+        while(n>=0){
+            sum+=((curr->data)*pow(2,n));
+            n--;
+            curr=curr->next;
+        }
+    return sum;
+    }
+
 int main(){
 
 
@@ -91,20 +109,25 @@ int main(){
  struct node *head2=NULL;
 
 
- insertBegin(&head,40);
- insertBegin(&head,30);
- insertBegin(&head,60);
- insertBegin(&head,50);
- insertBegin(&head,20);
- insertBegin(&head,80);
- insertBegin(&head,70);
- insertBegin(&head,10);
+//  insertBegin(&head,40);
+//  insertBegin(&head,30);
+//  insertBegin(&head,60);
+//  insertBegin(&head,50);
+//  insertBegin(&head,20);
+//  insertBegin(&head,80);
+//  insertBegin(&head,70);
+//  insertBegin(&head,10);
+insertBegin(&head,1);
+insertBegin(&head,0);
+insertBegin(&head,1);
  
  
 
 printList(head);
  cout<<endl;
+ cout<<getDecimalValue(head);
+ cout<<endl;
 
-head2 = mergeSort(head);
-printList(head2);
+// head2 = mergeSort(head);
+// printList(head2);
 }

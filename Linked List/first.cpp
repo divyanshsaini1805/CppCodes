@@ -94,16 +94,6 @@ struct node *N = NULL ;
 struct node *P = NULL;
 struct node *curr = head;
 
-while(curr!=NULL){
-    N = curr->next;
-
-    curr->next=P;
-
-    P = curr;
-    curr = N;
-}
-head = P;
-
 }
 
 
@@ -165,9 +155,31 @@ if(fast == NULL){
 
 }}
 
+struct node* kthReverse(struct node* head, int k){
+    struct node *curr = new node();
+    struct node *temp = new node();
+    struct node *a = new node();
+    struct node *b = new node();
+    curr=head;
+    temp=head;
+    b=head;
+    while(k>0){
+        curr=curr->next;
+        temp=temp->next;
+        k--;
+    }
+
+    a=curr->next;
+    curr->next=NULL;
+    reverse(b);
+    
+return curr;
+}
+
 int main(){
  
 node *head=NULL;
+node *head1=NULL;
 
 
 
@@ -176,11 +188,12 @@ insert_begin(&head,20);
 insert_begin(&head,10);
 insert_end(&head,10);
 insert_end(&head,100);
-insert_end(&head,500);
-insert(&head,3,100);
+insert_end(&head,50);
+insert(&head,3,54);
 printList(head);
 cout<<endl;
-
+head1 = kthReverse(head,3);
+printList(head1);
 // reverse(head);
 
 //   cout<< push(head,10);
