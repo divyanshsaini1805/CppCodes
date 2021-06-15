@@ -1,5 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+
 template<typename T>
 class Queue{
 private:
@@ -36,6 +38,7 @@ void top(){
 }
 void pop(){
     if(!isEmpty()){
+        // cout<<arr[f];
         f=(f+1)%ms;
         cs--;
     }
