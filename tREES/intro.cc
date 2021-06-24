@@ -57,21 +57,53 @@ void preOrder(Node *root){
     }
 }
 
+
+Node* buildTreePreOrder(){
+    int d;
+    cin>>d;
+    if(d==-1){
+        return NULL;
+    }
+
+    Node *root = new Node(d);
+    root->left=buildTreePreOrder();
+    root->right=buildTreePreOrder();
+    return root;
+}
+
+
+void printTreePreOrder(Node *root){
+    if(root==NULL){
+        return;
+    }
+    cout<<root->key;
+    printTreePreOrder(root->left);
+    printTreePreOrder(root->right);
+}
+
+
+
 int main(){
 
-    Node* root = new Node(10);
-    root->left = new Node(20);
-    root->right = new Node(20);
-    root->left->left = new Node(60);
-    root->right->right = new Node(80);
+    // Node* root = new Node(10);
+    // root->left = new Node(20);
+    // root->right = new Node(20);
+    // root->left->left = new Node(60);
+    // root->right->right = new Node(80);
 
+    // cout<<endl;
+    // preOrder(root);
+    // cout<<endl;
+    // postOrder(root);
+    // cout<<endl;
+    // cout<<sizeOftree(root);
+    // cout<<endl;
+    // cout<<maxofTree(root);
+
+    Node *root = buildTreePreOrder();
+    
+    printTreePreOrder(root);
+    cout<<endl;
+    
     inOrder(root);
-    cout<<endl;
-    preOrder(root);
-    cout<<endl;
-    postOrder(root);
-    cout<<endl;
-    cout<<sizeOftree(root);
-    cout<<endl;
-    cout<<maxofTree(root);
 }
