@@ -80,13 +80,13 @@ struct node* insertEnd(struct node*head, int data){
 }
 
 
-struct node* Dreverse(struct node **head){
+struct node* Dreverse(struct node *head){
 
-struct node *curr=*head;
+struct node *curr=head;
 struct node *temp=NULL;
 
-if(*head==NULL || (*head)->next==NULL){
-    return *head;
+if(head==NULL || head->next==NULL){
+    return head;
 }
 while(curr!=NULL){
     
@@ -96,10 +96,10 @@ while(curr!=NULL){
     curr=curr->prev;
 }
 if(temp!=NULL){
-*head=temp;
+head=temp;
 }
-return *head;
-// return temp; 
+// return head;
+ return temp; 
 }
 
 int main(){
@@ -117,6 +117,6 @@ int main(){
  insertEnd(head,100);
  printList(head);
  cout<<endl;
- head1=Dreverse(&head);
+ head1=Dreverse(head);
  printList(head1);
 }

@@ -81,6 +81,20 @@ heightPair diameterFast(Node*root){
     return p;
 }
 
+int diameterFast(Node*root, int *height){
+    int lh=0,rh=0;
+    int ldiameter=0, rdiameter=0;
+    if(root==NULL){
+        *height = 0;
+        return 0;
+    }
+
+    ldiameter = diameterFast(root->left, &lh);
+    rdiameter = diameterFast(root->right, &rh);
+    
+    *height = max(lh,rh) + 1;
+    return max(lh+rh+1,max(ldiameter,rdiameter));
+}
 
 
 
@@ -89,10 +103,14 @@ int main(){
     Node *root = buildTreePreOrder();
     heightPair p = diameterFast(root);
     int sum=0;
-    // cout<<height(root);
+    int height1 = 0;
+     cout<<p.diameter;
     cout<<endl;
     // cout<<diametre(root);
     cout<<endl;
-    cout<<p.diameter;
+    // cout<<p.diameter;
     cout<<endl;
+
+    int di = diameterFast(root,&height1);
+    cout<<di;
 }

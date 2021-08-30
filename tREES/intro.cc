@@ -76,7 +76,7 @@ void printTreePreOrder(Node *root){
     if(root==NULL){
         return;
     }
-    cout<<root->key;
+    cout<<root->key<<" ";
     printTreePreOrder(root->left);
     printTreePreOrder(root->right);
 }

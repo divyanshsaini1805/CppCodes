@@ -119,8 +119,17 @@ int main(){
 //  insertBegin(&head,10);
 insertBegin(&head,1);
 insertBegin(&head,0);
-insertBegin(&head,1);
  
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
+insertBegin(&head,1);
  
 
 printList(head);

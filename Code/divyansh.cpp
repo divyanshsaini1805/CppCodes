@@ -1,11 +1,10 @@
 #include<iostream>
  using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
 	int a;
 	string name;
-	cin>>name;
-	cout<<"Hello MR. "<<name;
+	cout<<"Hello World";
 	return 0;
 }

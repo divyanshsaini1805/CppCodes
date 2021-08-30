@@ -28,7 +28,7 @@ void printList(node *node)
 
 
 
-node *mergeSorted(node* head,node* head1){
+node *mergeLists(node* head,node* head1){
     if(head==NULL){
         return head1;
     }
@@ -39,36 +39,37 @@ node *mergeSorted(node* head,node* head1){
 node *head2=NULL; 
 if(head1->data >= head->data){
     head2 = head;
-    head2->next=mergeSorted(head->next,head1);
+    head2->next=mergeLists(head->next,head1);
 }
 else{
     head2 = head1;
-    head2->next=mergeSorted(head,head1->next);
+    head2->next=mergeLists(head,head1->next);
 }
 return(head2);
 }
 
 int main(){
-
-
  struct node *head=NULL;
  struct node *head1=NULL;
  struct node *head2=NULL;
 
 
  insertBegin(&head,40);
- insertBegin(&head,30);
  insertBegin(&head,20);
+ insertBegin(&head,30);
  insertBegin(&head,10);
- 
+
+ printList(head);
+ cout<<endl;
  insertBegin(&head1,80);
- insertBegin(&head1,70);
  insertBegin(&head1,60);
+ insertBegin(&head1,70);
  insertBegin(&head1,50);
  
-
+printList(head1);
+cout<<endl;
 //  cout<<endl;
 
-head2 = mergeSorted(head,head1);
+head2 = mergeLists(head,head1);
 printList(head2);
 }

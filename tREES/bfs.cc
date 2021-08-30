@@ -66,7 +66,7 @@ void bfs_levelwise(Node *root){
 
     while(q.empty()==false){
         
-        Node * node1= q.front();
+        Node * node1= q.front();   // check if the stack is empty
         if(node1==NULL){
         cout<<endl;
          q.pop();
