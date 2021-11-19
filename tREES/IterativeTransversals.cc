@@ -45,10 +45,9 @@ void inOrder_iterative(Node*root){
 }
 
 void preOrder_iterative(Node*root){
-    if (root == nullptr)
+    if (root == NULL)
     return;
     Node*temp=root;
-
     stack<Node*> s;
     s.push(root);
 
@@ -163,7 +162,7 @@ int main(){
      cout<<endl;
      preorderIterative(root);
      cout<<endl;
-     preOrder_iterative(root);
+    //  preOrder_iterative(root);
      cout<<endl;
      iterative_PostOrder(root);
     

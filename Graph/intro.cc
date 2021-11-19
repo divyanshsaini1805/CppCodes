@@ -99,13 +99,27 @@ int main(){
     Graph1 g(3);
     Graph<string> g1;
 
-    g1.insertNode("Modi","Putin");
-    g1.insertNode("Obama","Putin");
-    g1.insertNode("Trump","Obama",false);
-    g1.insertNode("Modi","Obama");
-    g1.insertNode("Modi","Trump",false);
+    // g1.insertNode("Modi","Putin");
+    // g1.insertNode("Obama","Putin");
+    // g1.insertNode("Trump","Obama",false);
+    // g1.insertNode("Modi","Obama");
+    // g1.insertNode("Modi","Trump",false);
 
-    g1.bfs("Modi");
+    // g1.bfs("Modi");
+    int n=5;
+    int arr[] = {1,2,3,4,5};
+    for(int i=0;i<n;i++){
+        for (int j = i; j < n; j=j+i)
+        {
+            arr[j]++;
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        /* code */
+        cout<<arr[i]<<" ";
+    }
+    
 
  return 0;
 }

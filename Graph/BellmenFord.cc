@@ -29,7 +29,7 @@ int u,v,wt;
 int N,m;
 cin>>N>>m;
 
-for(int i =0; i < m; i++){
+for(int i = 0; i < m; i++){
     cin>>u>>v>>wt;
     edges.push_back(graph_bellmanFord(u,v,wt));
 }
