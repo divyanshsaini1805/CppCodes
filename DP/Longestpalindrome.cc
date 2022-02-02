@@ -8,8 +8,6 @@ string reverse1(string str){
 string s;
 int n = str.length();
  
-    // Swap character starting from two
-    // corners
     for (int i = 0; i < n / 2; i++)
         swap(str[i], str[n - i - 1]);
 return str;
@@ -33,7 +31,7 @@ int LongestPalindromeInAString(string str1, int n, int m){
         if(str1[i-1]==str2[j-1]){
             t[i][j] = 1 + t[i-1][j-1];
     }else{ 
-        t[i][j] = max(t[i][j-1], t[i-1][j]);
+        t[i][j] = 0;
     }
 }
 }
@@ -42,8 +40,8 @@ int LongestPalindromeInAString(string str1, int n, int m){
 return t[n][m];
 }
 int main(){
-string str1 = "abccba";
-string str2 = "abcdef";
+string str1 = "geeks";
+string str2 = "abccba";
 
 int n = str1.size();
 int m = str2.size();
@@ -56,6 +54,5 @@ int m = str2.size();
 // cout<<LCSmemorized(t,str1,str2,6,6);
 // cout<<endl;
 cout<<LongestPalindromeInAString(str1, n, m);
-
 
 }

@@ -93,7 +93,7 @@ int main(){
  
  printList(head);
  cout<<endl;
-struct node *P = reverse(head,0);
+struct node *P = reverse(head,3);
 //  printList(head1);
 //  cout<<endl;
 printList(P);

@@ -56,8 +56,8 @@ int LCSbottomUp(string str1, string str2, int n, int m){
 return t[n][m];
 }
 int main(){
-string str1 = "abclef";
-string str2 = "abcdef";
+string str1 = "ahbgdc";
+string str2 = "axc";
 
 int n = str1.size();
 int m = str2.size();
