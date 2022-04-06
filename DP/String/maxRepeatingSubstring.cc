@@ -12,7 +12,7 @@ using namespace std;
     
     vector<int> m(256,-1);
         while(right<str.size()){
-            if(m[str[right]]!=-1) left = max(left, m[str[right]]+1);
+            if(m[str[right]]!=-1) left = max(left, m[str[right]]+1); //same as while(left<right) left++ but is faster as we skip many iteration>
             
                 m[str[right]] = right; 
                 len=max(len,right-left+1); 

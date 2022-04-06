@@ -56,21 +56,10 @@ void kadene(int a[],int n){
  cout<<ms; 
 
 }
-void kadene1(int a[],int n){
-  int cs=1,ms=0;
-  for (int i = 0; i < n; i++)
-  {
-          cs *= a[i];
-          if(cs==0)
-                cs=0;
-           if(cs<0){  
-                ms = max(cs,ms); if(cs<ms) cs = 0;
-           }
-  ms = max(cs,ms);
-  }
- cout<<ms; 
 
-}
+
+
+
 int main()
 {
  int it,j;

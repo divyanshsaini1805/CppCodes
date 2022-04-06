@@ -1,11 +1,14 @@
 {
     "files.associations": {
+        "*.ejs": "html",
         "iostream": "cpp",
         "ostream": "cpp",
         "random": "cpp",
         "new": "cpp",
         "deque": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp"
     }
 }
