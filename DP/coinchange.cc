@@ -96,8 +96,8 @@ int main(){
 
     int size = sizeof(arr)/sizeof(arr[0]);
     int sum = 5;
-    cout<<maxNumberOfWays(arr,size,sum);
+    // cout<<maxNumberOfWays(arr,size,sum);
     cout<<endl;
-    // cout<<minNumberOfCoins(arr,size,sum);
+    cout<<minNumberOfCoins(arr,size,sum);
     cout<<mincoins(arr,size,sum);
 }

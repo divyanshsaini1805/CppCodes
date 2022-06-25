@@ -5,7 +5,7 @@ using namespace std;
 
 const ll mod = 1000000007;
 // int m = 1e9+7;
-
+//program for (a^B^c)%m        
 ll binpow(ll a,ll b,ll m){
 
 
@@ -20,15 +20,33 @@ ll binpow(ll a,ll b,ll m){
         return (a*t%m);
     }
 }
+
+
+
+ll exp(ll a, ll n){
+    ll res =1;
+    while(n)
+    {
+        if(n%2)
+        {res*=a; n--;}
+        else
+        {
+        a*=a; n/=2;
+        }
+    }
+return res;
+
+}
 int main()
 {
  int n;
- cin >> n;
- while(n--){
-        ll a,b,c;
-        cin>>a>>b>>c;
-        int temp = binpow(b,c,mod-2);
-        cout<<binpow(a,temp,mod)<<endl;
- }
+//  cin >> n;
+//  while(n--){
+        ll a,b;
+        cin>>a>>b;
+        //int temp = binpow(b,c,mod-2); //by fermat's little theorem
+        // cout<<binpow(a,b,mod)<<endl;
+        cout<<exp(a,b)<<endl;
+//  }
 return 0;
 }
